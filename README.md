@@ -1,6 +1,6 @@
 # UnRugable.com
 
-A token launcher platform on Base that provides permanent USDC backing for meme tokens, enabling instant refund ability and eliminating rug pull risks.
+A token launcher platform on Base that provides permanent USDC backing for meme tokens, enabling instant refundability and reducing common rug pull vectors.
 
 ## Overview
 
@@ -10,7 +10,7 @@ UnRugable.com addresses the security issues common in meme token launches by imp
 
 ### Permanent USDC Backing
 
-Each token is backed by USDC that remains locked in the contract. The refund value is calculated as: (your tokens × total USDC backing) ÷ circulating supply. This ratio cannot be manipulated by creators, as there is no mechanism to withdraw USDC from the contract outside of the refund process.
+Each deployed token contract holds USDC and maintains `totalUSDCBacking`. The on-chain “price per token” is \(totalUSDCBacking ÷ circulatingSupply\). A refund then pays out \(tokens × price\), with the contract applying its fee rules (creator/dev fees are taken in tokens, and a backing boost reduces the USDC sent) and rounding down to the minimum refund unit.
 
 ### Instant Refundability
 
