@@ -264,33 +264,6 @@ Validated across 10M+ fuzz runs:
 
 ---
 
-## 🐛 Responsible Disclosure
-
-### Reporting Security Issues
-
-If you discover a security vulnerability, please:
-
-1. **DO NOT** open a public issue
-2. **Email** security@unrugable.com (or create GitHub Security Advisory)
-3. **Include:**
-   - Detailed description of the vulnerability
-   - Steps to reproduce
-   - Potential impact assessment
-   - Suggested fix (if available)
-
-### Response Timeline
-
-- **Acknowledgment:** Within 24 hours
-- **Initial Assessment:** Within 48 hours
-- **Fix Development:** Depends on severity
-- **Public Disclosure:** After fix is deployed and verified
-
-### Bug Bounty
-
-While we don't have a formal bug bounty program, we appreciate security researchers and will acknowledge contributions.
-
----
-
 ## 📚 Additional Resources
 
 ### Foundry Testing
@@ -325,3 +298,4 @@ This security policy and the associated test reports are provided for informatio
 **Last Updated:** January 30, 2026  
 **Testing Framework:** Foundry (Forge) + Certora Prover  
 **Test Coverage:** 230,000,000+ scenarios + Formal verification (17 properties)
+
