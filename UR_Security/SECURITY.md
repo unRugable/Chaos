@@ -279,7 +279,7 @@ Validated across 10M+ fuzz runs:
 
 ### Contract Source
 
-- **[UnRugable.sol](../../UnRugable.sol)** - Production contract (UnrugableToken + UR_Factory)
+- **[UnRugable.sol](../UnRugable.sol)** - Production contract (UnrugableToken + UR_Factory)
 
 ---
 
@@ -298,5 +298,6 @@ This security policy and the associated test reports are provided for informatio
 **Last Updated:** January 30, 2026  
 **Testing Framework:** Foundry (Forge) + Certora Prover  
 **Test Coverage:** 230,000,000+ scenarios + Formal verification (17 properties)
+
 
 
