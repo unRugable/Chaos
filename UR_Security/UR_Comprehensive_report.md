@@ -15,7 +15,7 @@ This comprehensive report presents the **combined security validation** for the 
 1. **Unit Tests:** Core functionality validation (12 tests)
 2. **Unit Fuzz Tests:** 10,000,000 runs per fuzz test (20M+ total cases)
 3. **Stateful Invariant Tests:** 1,000,000+ runs per contract with depth 20 (210M+ function calls)
-4. **Formal Verification:** Certora Prover — mathematical proofs for ALL possible states (17 properties)
+4. **Formal Verification:** Certora Prover — mathematical proofs for ALL possible states (15 properties)
 
 All tests passed with **zero failures**, demonstrating exceptional contract reliability and security at the highest testing standards.
 
@@ -24,7 +24,7 @@ All tests passed with **zero failures**, demonstrating exceptional contract reli
 - ✅ **100% Test Pass Rate** across all test types
 - ✅ **20,000,000+ Unit Fuzz Test Cases** executed
 - ✅ **210,000,000+ Function Calls** tested (invariant runs × depth 20)
-- ✅ **17 Properties Formally Verified** (9 UnrugableToken + 8 UR_Factory)
+- ✅ **15 Properties Formally Verified** (8 UnrugableToken + 7 UR_Factory)
 - ✅ **Zero Vulnerabilities** discovered
 - ✅ **All Security Invariants** validated
 - ✅ **Production-Ready** status confirmed
@@ -210,15 +210,15 @@ Certora Prover uses **mathematical proofs** to verify properties hold for **ALL 
 - **Unit Fuzz Tests:** 20,000,000+ cases
 - **Token Invariant Tests:** 60,000,000 function calls (1M × 20 × 3)
 - **Factory Invariant Tests:** 150,000,000 function calls (1.5M × 20 × 5)
-- **Formal Verification:** 17 properties (9 token + 8 factory)
-- **Grand Total:** **230,000,000+ test scenarios + 17 formal proofs**
+- **Formal Verification:** 15 properties (8 token + 7 factory)
+- **Grand Total:** **230,000,000+ test scenarios + 15 formal proofs**
 
 ### Execution Summary
 
 | Metric | Value |
 |--------|-------|
 | **Total Test Cases** | 230,000,000+ |
-| **Formal Properties** | 17 verified |
+| **Formal Properties** | 15 verified |
 | **Total Execution Time** | ~6 hours (Foundry) + Certora runs |
 | **Tests Passed** | All (100%) |
 | **Tests Failed** | 0 |
@@ -266,7 +266,7 @@ Certora Prover uses **mathematical proofs** to verify properties hold for **ALL 
 **Justification:**
 1. **230,000,000+ test cases** executed with zero failures
 2. **210,000,000+ function calls** tested with depth 20
-3. **17 properties formally verified** for ALL possible states
+3. **15 properties formally verified** for ALL possible states
 4. **All security invariants** validated across extreme edge cases
 5. **Gas usage** consistent and predictable
 6. **State transitions** validated under complex scenarios
@@ -286,7 +286,7 @@ Certora Prover uses **mathematical proofs** to verify properties hold for **ALL 
 | **Complex Sequence Failures** | Extremely Low | Depth 20 sequences tested |
 | **Backing Accounting Errors** | Extremely Low | 60M+ token operations validated |
 | **Factory Management Errors** | Extremely Low | 150M+ factory operations validated |
-| **Formal Property Violations** | None | 17/17 properties verified |
+| **Formal Property Violations** | None | 15/15 properties verified |
 
 ---
 
@@ -297,15 +297,15 @@ The Unrugable.com contracts have undergone **comprehensive maximum-coverage test
 - **12 unit tests** (all passed)
 - **20,000,000+ fuzz test cases**
 - **210,000,000+ function calls** (2.5M runs × 20 depth × 8 invariants)
-- **17 formal verification properties** (9 UnrugableToken + 8 UR_Factory)
-- **Total: 230,000,000+ test scenarios + 17 formal proofs**
+- **15 formal verification properties** (8 UnrugableToken + 7 UR_Factory)
+- **Total: 230,000,000+ test scenarios + 15 formal proofs**
 
 All tests passed with **zero failures**, demonstrating:
 
 - **Exceptional Reliability:** No bugs discovered across 230M+ scenarios
 - **Strong Security:** All known vulnerabilities fixed and validated
 - **Protocol-Level Resilience:** Invariants hold across 20-call sequences
-- **Mathematical Correctness:** USDC backing calculations validated; 17 properties formally proven
+- **Mathematical Correctness:** USDC backing calculations validated; 15 properties formally proven
 - **Production Readiness:** Contracts ready for mainnet deployment on Base
 
 The contracts demonstrate **enterprise-grade quality** and are **ready for production deployment**.
