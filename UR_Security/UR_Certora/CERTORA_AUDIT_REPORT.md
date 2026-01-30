@@ -107,9 +107,10 @@ This report presents the results of **formal verification** of the UnRugable sma
 
 - **Foundry Tests:** [UR_Foundry/COMPREHENSIVE_TEST_REPORT.md](../UR_Foundry/COMPREHENSIVE_TEST_REPORT.md)
 - **Combined Report:** [UR_Comprehensive_report.md](../UR_Comprehensive_report.md) (Certora + Foundry)
-- **Contract Source:** [../../../contracts/UnRugable.sol](../../../contracts/UnRugable.sol)
+- **Contract Source:** [../UnRugable.sol](..UnRugable.sol)
 
 ---
 
 **Report Generated:** January 30, 2026  
 **Verified By:** Certora Prover
+
