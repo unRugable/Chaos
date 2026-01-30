@@ -43,13 +43,13 @@ Unrugable.com has undergone comprehensive automated security testing with **230,
 8. ✅ **priceCalculationReasonable** - Price functions are consistent
 
 **UR_Factory (8 rules):**
-9. ✅ **launchIncrementsTokenCount** - Launch increments tokenCount by 1
-10. ✅ **launchStoresTokenInfo** - Launch stores correct TokenInfo
-11. ✅ **launchRevertsOnEmptyName** - Launch reverts on empty name
-12. ✅ **launchRevertsOnEmptySymbol** - Launch reverts on empty symbol
-13. ✅ **launchRevertsOnZeroCreator** - Launch reverts on zero creator
-14. ✅ **launchRevertsOnEmptyImageUri** - Launch reverts on empty imageUri
-15. ✅ **setPlatformWalletUpdatesCorrectly** - setPlatformWallet updates correctly (owner only)
+1. ✅ **launchIncrementsTokenCount** - Launch increments tokenCount by 1
+2. ✅ **launchStoresTokenInfo** - Launch stores correct TokenInfo
+3. ✅ **launchRevertsOnEmptyName** - Launch reverts on empty name
+4. ✅ **launchRevertsOnEmptySymbol** - Launch reverts on empty symbol
+5. ✅ **launchRevertsOnZeroCreator** - Launch reverts on zero creator
+6. ✅ **launchRevertsOnEmptyImageUri** - Launch reverts on empty imageUri
+7. ✅ **setPlatformWalletUpdatesCorrectly** - setPlatformWallet updates correctly (owner only)
 
 **Certora Jobs:**
 - **UnrugableToken:** [94720a02f991426287904e7625c3f7df](https://prover.certora.com/output/7827024/94720a02f991426287904e7625c3f7df/?anonymousKey=eaf7ab1153d662a1beeb5175f4f149831d878430) (9/9)
@@ -63,11 +63,11 @@ Unrugable.com has undergone comprehensive automated security testing with **230,
 3. ✅ **invariant_holderCount_matches_known_holders** - Holder count tracking consistency
 
 **UR_Factory (5 invariants, 1.5M runs each, depth 20):**
-4. ✅ **invariant_tokenCount_matches_getAllTokens** - Token count consistency
-5. ✅ **invariant_allTokens_unique_and_nonzero** - Token uniqueness and non-zero addresses
-6. ✅ **invariant_tokens_wired_and_owner_renounced** - Token wiring and ownership renunciation
-7. ✅ **invariant_getTokensByCreator_consistent** - Creator token mapping consistency
-8. ✅ **invariant_allTokens_covered_by_creators** - All tokens tracked by creators
+1. ✅ **invariant_tokenCount_matches_getAllTokens** - Token count consistency
+2. ✅ **invariant_allTokens_unique_and_nonzero** - Token uniqueness and non-zero addresses
+3. ✅ **invariant_tokens_wired_and_owner_renounced** - Token wiring and ownership renunciation
+4. ✅ **invariant_getTokensByCreator_consistent** - Creator token mapping consistency
+5. ✅ **invariant_allTokens_covered_by_creators** - All tokens tracked by creators
 
 **Validation:** Each invariant tested across 20,000,000+ function calls with complex multi-step sequences.
 
@@ -322,3 +322,4 @@ This security policy and the associated test reports are provided for informatio
 **Last Updated:** January 30, 2026  
 **Testing Framework:** Foundry (Forge) + Certora Prover  
 **Test Coverage:** 230,000,000+ scenarios + Formal verification (17 properties)
+
