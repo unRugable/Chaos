@@ -15,7 +15,7 @@ Unrugable.com has undergone comprehensive automated security testing with **230,
 | **Unit Tests** | N/A | 12 tests | ✅ **100% PASS** |
 | **Unit Fuzz Tests** | 10M per test (2 tests) | 20,000,000+ | ✅ **100% PASS** |
 | **Stateful Invariant Tests** | 1M–1.5M per invariant (8 invariants) | 210,000,000+ function calls | ✅ **100% PASS** |
-| **Formal Verification** | ALL possible states | 17 properties verified | ✅ **VERIFIED** |
+| **Formal Verification** | ALL possible states | 15 properties verified | ✅ **VERIFIED** |
 | **Total Coverage** | - | **230,000,000+** | ✅ **ALL PASS** |
 
 ### Stateful Testing Depth
@@ -30,9 +30,9 @@ Unrugable.com has undergone comprehensive automated security testing with **230,
 
 ### Formal Verification (Certora Prover)
 
-**17 Critical Properties Mathematically Proven:**
+**15 Critical Properties Mathematically Proven:**
 
-**UnrugableToken (9 rules):**
+**UnrugableToken (8 rules):**
 1. ✅ **buyIncreasesBacking** - Buy increases backing by exactly usdcAmount
 2. ✅ **buyIncreasesTotalSupply** - Buy mints tokens
 3. ✅ **buyToSendsTokensToRecipient** - buyTo sends tokens to recipient
@@ -42,7 +42,8 @@ Unrugable.com has undergone comprehensive automated security testing with **230,
 7. ✅ **circulatingSupplyCalculationSound** - Circulation calculation is sound
 8. ✅ **priceCalculationReasonable** - Price functions are consistent
 
-**UR_Factory (8 rules):**
+**UR_Factory (7 rules):**
+
 1. ✅ **launchIncrementsTokenCount** - Launch increments tokenCount by 1
 2. ✅ **launchStoresTokenInfo** - Launch stores correct TokenInfo
 3. ✅ **launchRevertsOnEmptyName** - Launch reverts on empty name
@@ -218,7 +219,7 @@ Validated across 10M+ fuzz runs:
 
 **Tool:** Certora Prover  
 **Method:** Mathematical proofs for ALL possible inputs and states  
-**Properties Verified:** 17 critical business logic properties  
+**Properties Verified:** 15 critical business logic properties  
 **Result:** ✅ All critical properties verified, zero security vulnerabilities
 
 **Reports:** [UR_Certora/CERTORA_AUDIT_REPORT.md](UR_Certora/CERTORA_AUDIT_REPORT.md)
@@ -321,5 +322,4 @@ This security policy and the associated test reports are provided for informatio
 
 **Last Updated:** January 30, 2026  
 **Testing Framework:** Foundry (Forge) + Certora Prover  
-**Test Coverage:** 230,000,000+ scenarios + Formal verification (17 properties)
-
+**Test Coverage:** 230,000,000+ scenarios + Formal verification (15 properties)
