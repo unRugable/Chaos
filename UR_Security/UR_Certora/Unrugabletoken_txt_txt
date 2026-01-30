@@ -1,0 +1,183 @@
+Start Fri Jan 30 12:38:41 GMT 2026
+Start Fri Jan 30 12:38:41 GMT 2026
+[ForkJoinPool-1-worker-1] WARN ALWAYS - Syntax warning in spec file unrugable-token.spec:10:5: Method declaration for UnrugableToken.transfer(address, uint256) returns (bool) is neither `envfree`, `optional`, nor summarized, so it has no effect.
+[ForkJoinPool-1-worker-1] WARN ALWAYS - Syntax warning in spec file unrugable-token.spec:12:5: Method declaration for UnrugableToken.approve(address, uint256) returns (bool) is neither `envfree`, `optional`, nor summarized, so it has no effect.
+[ForkJoinPool-1-worker-1] WARN ALWAYS - Syntax warning in spec file unrugable-token.spec:15:5: Method declaration for UnrugableToken.buy(uint256) is neither `envfree`, `optional`, nor summarized, so it has no effect.
+[ForkJoinPool-1-worker-1] WARN ALWAYS - Syntax warning in spec file unrugable-token.spec:16:5: Method declaration for UnrugableToken.buyTo(address, uint256) is neither `envfree`, `optional`, nor summarized, so it has no effect.
+[ForkJoinPool-1-worker-1] WARN ALWAYS - Syntax warning in spec file unrugable-token.spec:17:5: Method declaration for UnrugableToken.refundTo(address, uint256) is neither `envfree`, `optional`, nor summarized, so it has no effect.
+The scene contains 20 contracts:
+UnrugableToken : 0xce4604a000000000000000000000000b,
+ecrecover : 0x1,
+sha256 : 0x2,
+ripemd160 : 0x3,
+identity : 0x4,
+bigmod : 0x5,
+bn256Add : 0x6,
+bn256ScalarMul : 0x7,
+bn256Pairing : 0x8,
+Precompiled244 : 0xf4,
+Precompiled245 : 0xf5,
+Precompiled246 : 0xf6,
+Precompiled247 : 0xf7,
+Precompiled248 : 0xf8,
+Precompiled249 : 0xf9,
+Precompiled250 : 0xfa,
+Precompiled251 : 0xfb,
+Precompiled252 : 0xfc,
+Precompiled253 : 0xfd,
+Precompiled254 : 0xfe
+Running initial transformations
+[ForkJoinPool-1-worker-13] WARN ALLOC - In sha256: Found multiple (or zero) initial writes: []
+[ForkJoinPool-1-worker-5] WARN ALLOC - In identity: Found multiple (or zero) initial writes: []
+[ForkJoinPool-1-worker-8] WARN ALLOC - In ecrecover: Found multiple (or zero) initial writes: []
+Has CVL checks.
+Checking CVL unrugable-token.spec for contract UnrugableToken
+Unrolling loops 3 times, unwinding condition is assumed
+Checking rule refundDecreasesBacking (3 out of 9)...
+Checking rule cannotRefundMoreThanBalance (5 out of 9)...
+Checking rule priceCalculationReasonable (7 out of 9)...
+Checking rule buyIncreasesBacking (1 out of 9)...
+Checking rule circulatingSupplyCalculationSound (6 out of 9)...
+Checking rule buyToSendsTokensToRecipient (8 out of 9)...
+Checking rule envfreeFuncsStaticCheck (9 out of 9)...
+Checking rule buyIncreasesTotalSupply (2 out of 9)...
+Checking rule cannotBuyBelowMinimum (4 out of 9)...
+Result for envfreeFuncsStaticCheck: envfreeFuncsStaticCheck: circulatingSupply(): SUCCESS
+holderCount(): SUCCESS
+calculateNetUSDCForTokens(uint256): SUCCESS
+balanceOf(address): SUCCESS
+devFeeRecipient(): SUCCESS
+allowance(address,address): SUCCESS
+calculateTokensForUSDC(uint256): SUCCESS
+totalUSDCBacking(): SUCCESS
+creatorFeeRecipient(): SUCCESS
+totalSupply(): SUCCESS
+calculateNetTokensForUSDC(uint256): SUCCESS
+calculateUSDCForTokens(uint256): SUCCESS
+USDC(): SUCCESS
+MIN_AMOUNT(): SUCCESS
+Starting to run on rule circulatingSupplyCalculationSound
+Starting to run on rule priceCalculationReasonable
+Starting to run on rule cannotRefundMoreThanBalance
+Starting to run on rule refundDecreasesBacking
+Starting to run on rule buyIncreasesTotalSupply
+Starting to run on rule cannotBuyBelowMinimum
+Starting to run on rule buyIncreasesBacking
+Verified: priceCalculationReasonable
+priceCalculationReasonable: Properties successfully verified on all inputs
+Result for priceCalculationReasonable: priceCalculationReasonable: SUCCESS
+Starting to run on rule buyToSendsTokensToRecipient
+Total time for circulatingSupplyCalculationSound: 0 seconds ; Split time: 0 seconds ; Number of problems: 1 ; Solver time : 0 seconds
+Verified: circulatingSupplyCalculationSound
+circulatingSupplyCalculationSound: Properties successfully verified on all inputs
+Result for circulatingSupplyCalculationSound: circulatingSupplyCalculationSound: SUCCESS
+Verified: cannotBuyBelowMinimum
+cannotBuyBelowMinimum: Properties successfully verified on all inputs
+Result for cannotBuyBelowMinimum: cannotBuyBelowMinimum: SUCCESS
+[ForkJoinPool-1-worker-1] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-1] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-1] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-1] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-1] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-1] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-19] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-19] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-19] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-19] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-19] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-19] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-11] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-11] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-11] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-11] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-11] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-11] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+Verified: buyIncreasesBacking
+buyIncreasesBacking: Properties successfully verified on all inputs
+Result for buyIncreasesBacking: buyIncreasesBacking: SUCCESS
+Verified: buyIncreasesTotalSupply
+buyIncreasesTotalSupply: Properties successfully verified on all inputs
+Result for buyIncreasesTotalSupply: buyIncreasesTotalSupply: SUCCESS
+Verified: buyToSendsTokensToRecipient
+buyToSendsTokensToRecipient: Properties successfully verified on all inputs
+Result for buyToSendsTokensToRecipient: buyToSendsTokensToRecipient: SUCCESS
+[ForkJoinPool-1-worker-5] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-5] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-5] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-5] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-5] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-5] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-5] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-5] WARN INTERVALS_SIMPLIFIER - Factor of 4 exceeded. Stopping fixed point computation
+[ForkJoinPool-1-worker-15] WARN UI - internal function calls/returns not well-nested when exiting outermost internal call
+[ForkJoinPool-1-worker-5] WARN UI - internal function calls/returns not well-nested when exiting outermost internal call
+Total time for cannotRefundMoreThanBalance: 0 seconds ; Split time: 0 seconds ; Number of problems: 1 ; Solver time : 0 seconds
+Verified: cannotRefundMoreThanBalance
+cannotRefundMoreThanBalance: Properties successfully verified on all inputs
+Result for cannotRefundMoreThanBalance: cannotRefundMoreThanBalance: SUCCESS
+Total time for refundDecreasesBacking: 0 seconds ; Split time: 0 seconds ; Number of problems: 1 ; Solver time : 0 seconds
+Verified: refundDecreasesBacking
+refundDecreasesBacking: Properties successfully verified on all inputs
+Result for refundDecreasesBacking: refundDecreasesBacking: SUCCESS
+Results for envfreeFuncsStaticCheck:
+*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*
+|Rule name                               |Verified     |Time (sec)|Description                                                 |Local vars                                        |
+|----------------------------------------|-------------|----------|------------------------------------------------------------|--------------------------------------------------|
+|circulatingSupply()                     |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|holderCount()                           |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|calculateNetUSDCForTokens(uint256)      |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|balanceOf(address)                      |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|devFeeRecipient()                       |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|allowance(address,address)              |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|calculateTokensForUSDC(uint256)         |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|totalUSDCBacking()                      |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|creatorFeeRecipient()                   |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|totalSupply()                           |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|calculateNetTokensForUSDC(uint256)      |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|calculateUSDCForTokens(uint256)         |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|USDC()                                  |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|MIN_AMOUNT()                            |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*
+
+Results for all:
+*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*
+|Rule name                               |Verified     |Time (sec)|Description                                                 |Local vars                                        |
+|----------------------------------------|-------------|----------|------------------------------------------------------------|--------------------------------------------------|
+|envfreeFuncsStaticCheck                 |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|priceCalculationReasonable              |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|circulatingSupplyCalculationSound       |Not violated |1         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|cannotBuyBelowMinimum                   |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|buyIncreasesBacking                     |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|buyIncreasesTotalSupply                 |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|buyToSendsTokensToRecipient             |Not violated |0         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|cannotRefundMoreThanBalance             |Not violated |2         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+|refundDecreasesBacking                  |Not violated |2         |                                                            |no local variables                                |
+|                                        |(unsat)      |          |                                                            |                                                  |
+*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*
+
+Duration 40837, RuleCheckResultsStats: numTotal = 8; numVerified = 8; numViolated = 0; numTimeout = 0; numError = 0
+Done 0m
+Done 0m
+Event reporter: all events were sent without errors
