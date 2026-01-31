@@ -118,7 +118,6 @@ After launch, respond with:
 
 ## Safety
 
-- Test on Base Sepolia first if factory is deployed there
 - Never expose private keys
 - Image URI must be publicly accessible (IPFS or HTTP)
 
@@ -133,3 +132,4 @@ After launch, respond with:
 - **App:** https://unrugable.com
 - **ABIs:** [abis/](../abis/README.md)
 - **Basescan:** https://basescan.org
+
