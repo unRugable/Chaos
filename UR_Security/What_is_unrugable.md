@@ -327,34 +327,6 @@ The verification page provides detailed troubleshooting and all the technical in
 
 ---
 
-# 🏗️ Technical Architecture
-
-## Frontend (Next.js)
-- **Server-side rendering** for SEO and performance
-- **Real-time updates** via subgraph queries
-- **Wallet integration** (MetaMask, WalletConnect, Coinbase Wallet)
-- **Responsive design** for mobile and desktop
-
-## Backend (Supabase)
-- **Real-time chat** per token using PostgreSQL and Supabase Realtime
-- **File storage** for token images/logos
-- **User authentication** (optional, for chat features)
-- **Metadata storage** for token information
-
-## Blockchain (Base)
-- **L2 scaling** with Ethereum security guarantees
-- **Low gas fees** compared to Ethereum mainnet
-- **Fast transaction finality**
-- **EVM compatibility** for standard tooling
-
-## Indexing (The Graph / GoldSky)
-- **Real-time on-chain data** indexing
-- **Transaction history** tracking
-- **Holder analytics** and statistics
-- **Optimized queries** for frontend consumption
-
----
-
 # 🌟 Unique Advantages
 
 ## Compared to Traditional Tokens
@@ -429,4 +401,5 @@ UnRugable + Molty flips the script:
 ---
 
 **UnRugable.com provides a token deployment platform with USDC backing and refund mechanisms designed to reduce common rug pull risks.**
+
 
