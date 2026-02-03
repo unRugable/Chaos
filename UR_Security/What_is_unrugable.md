@@ -295,36 +295,38 @@ The verification page provides detailed troubleshooting and all the technical in
 ## Token Value Proposition
 
 ### Intrinsic Value
-- **USDC backing**: Each token represents a proportional claim on USDC in the contract
-- **Mathematical pricing**: `price = totalUSDCBacking ÷ circulatingSupply` (scaled by 1e18)
-- **Anti-dilution mechanism**: 0.5% backing boost from each transaction permanently increases backing
-- **Price increases with buys**: More USDC added increases backing, raising price
-- **Price decreases with refunds**: USDC removed decreases backing, lowering price
+- **USDC backing**: Each token represents a proportional claim on the USDC locked in the contract.
+- **Mathematical pricing**: `price = totalUSDCBacking ÷ circulatingSupply` (scaled by 1e18 for precision).
+- **Anti-dilution / backing-boost mechanism**: 0.5% of the USDC value of **every** buy or refund transaction is permanently retained in the contract as extra backing — increasing the totalUSDCBacking over time.
+- **Effect on buys**: Users add new USDC to the contract → after the 0.5% is locked forever, the net added backing is slightly less than the full input, but still increases total backing → more USDC supports the existing supply → price per token rises.
+- **Effect on sells/refunds**: When tokens are refunded, USDC is removed proportionally → but the 0.5% backing boost means slightly **less** USDC actually leaves the contract than the proportional share of supply burned → the remaining holders see a higher USDC backing per remaining token → price per token increases slightly.
+- **Net result**: Whether trading volume comes from buys **or** refunds, the 0.5% fee creates a **ratchet effect** — total locked USDC grows (or shrinks less) relative to circulating supply → the backing ratio (and thus the refundable floor price) trends upward over time as long as the token sees activity.
+
+This mechanism turns normal trading volume into slow, unstoppable **strengthening** of the token's intrinsic USDC value — no matter the direction of trades.
 
 ### Market Dynamics
-- **Direct contract trading**: Buy/sell directly with the token contract (1% fee)
-- **Peer-to-peer swaps**: Transfer tokens between wallets (fee-free, no contract interaction)
-- **DEX integration**: Can be traded on Uniswap, BaseSwap, and other DEXs (fee-free, uses market price)
-- **Creator incentives**: 0.3% of all buy/refund transactions (received in tokens)
-- **Platform sustainability**: 0.2% of all buy/refund transactions (received in tokens)
-- **Backing growth**: 0.5% of each transaction's USDC value permanently increases backing
+- **Direct contract trading**: Buy or refund directly via the token contract (1% total fee applied).
+- **Peer-to-peer transfers**: Send tokens wallet-to-wallet with zero fees and no contract interaction.
+- **DEX integration**: Fully compatible with Uniswap, BaseSwap, and other DEXs (trades at market price, no contract fees).
+- **Creator incentives**: 0.3% of every buy/refund transaction (paid in newly minted or existing tokens to the creator's address).
+- **Platform sustainability**: 0.2% of every buy/refund transaction (paid in tokens to the platform wallet).
+- **Backing growth**: 0.5% of the USDC value from every transaction is permanently locked → provides ongoing upward pressure on the backing ratio.
 
 ## Risk Mitigation
 
 ### Creator Risks
-- **No fund access**: USDC permanently locked
-- **Fee limitations**: Only 0.3% creator share
-- **Community pressure**: Transparent operations
-- **Long-term alignment**: Success = higher fees
+- **No fund access**: USDC is permanently locked in the contract with no withdrawal functions for anyone (except proportional refunds).
+- **Fee limitations**: Creator receives only the 0.3% token share — no control over USDC.
+- **Community pressure**: All mechanics and transactions are fully on-chain and transparent.
+- **Long-term alignment**: Creator earnings grow only with sustained trading volume and token success.
 
 ### User Risks
-- **Smart contract risk**: Code is immutable and publicly verifiable; users should review before interacting
-- **Network risk**: Base L2 network security (inherits Ethereum security)
-- **USDC risk**: Backing depends on USDC stability
-- **Price volatility**: Token price changes with each buy/refund transaction
-- **Minimum amounts**: 0.001 USDC minimum for buys and refunds
-- **Scam protection**: Mathematical refund guarantees prevent creator rug pulls
-
+- **Smart contract risk**: Contracts are immutable, ownership-renounced, and publicly verifiable — users should audit before heavy interaction.
+- **Network risk**: Relies on Base L2 (which inherits Ethereum's security model).
+- **USDC risk**: Backing value depends on USDC's stability as a stablecoin.
+- **Price volatility**: On-chain price (backing ratio) fluctuates with every buy/refund; DEX price can diverge based on external liquidity.
+- **Minimum amounts**: 0.001 USDC minimum for buys and refunds (after fees).
+- **Scam protection**: Built-in mathematical refund guarantees eliminate traditional creator rug-pull vectors.
 ---
 
 # 🌟 Unique Advantages
@@ -401,5 +403,6 @@ UnRugable + Molty flips the script:
 ---
 
 **UnRugable.com provides a token deployment platform with USDC backing and refund mechanisms designed to reduce common rug pull risks.**
+
 
 
